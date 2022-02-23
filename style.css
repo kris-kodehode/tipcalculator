@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    background-color: hsl(185, 41%, 84%);
+    font-family: "space mono";
+}
+
+#logo {
+    display: block;
+    max-width: 87px;
+    margin: 2em auto;
+}
+
+#container {
+    box-sizing: border-box;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+#halfcontainer {
+    padding: 0 .4em 0 .4em;
+}
+
+#halfcontainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+#bill {
+    background-image: url("images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: .5em;
+}
+
+input {
+    color: hsl(183, 100%, 15%);
+    padding-right: .5em;
+    border-radius: 5px;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid hsl(189, 41%, 97%);
+    font-family: "space mono";
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+label {
+    font-size: 1rem;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    margin: 1em 1em .5em 0;
+}
+
+#tip-percentage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#tip-percentage label {
+    margin-right: 5em;
+}
+
+.button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 6.1em;
+    height: 1.8em;
+    font-family: "space mono";
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+}
+
+button:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);    
+}
+
+button:focus {
+    outline: none;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+#customtip {
+    width: 128.4px;
+    height: 37.2px;
+}
+
+input:focus, input:hover{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+#peoplebox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#peoplebox p {
+    display: none;
+    margin: 1em 0 .25em 3em;
+    color: goldenrod;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+#people {
+    width: 100%;
+    background-image: url("images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: .5em;
+}
+
+#lowercontainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+      "tip ."
+      "tot ."
+      "res res";
+    margin: 1em 0 0 0;
+    padding: 1.5em;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 15px;
+}
+
+#ultip {
+    font-size: .8rem;
+    justify-self: left;
+    grid-area: tip;
+}
+#ultotal {
+    font-size: .8rem;
+    justify-self: left;
+    grid-area: tot;
+}
+#reset {grid-area: res;}
+
+#tip-amount, #total {
+    justify-self: right;
+    margin: 0;
+    font-size: 2.2rem;
+    color: hsl(172, 67%, 45%);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "space mono";
+    font-weight: 700;
+}
+
+#reset {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    border: none;
+    margin-top: .5em;
+    width: 100%;
+    height: 2em;
+    font-family: "space mono";
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#reset:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+@media (min-width: 900px) {
+    #container {
+        display: flex;
+        box-sizing: border-box;
+        max-width: min-content;
+        border-radius: 20px;
+    }
+
+    #halfcontainer form label{
+        margin: .2em 1em .5em 0;
+    }
+
+    label {
+        margin: 1.5em 1em .5em 0;
+    }
+
+    #halfcontainer {
+        max-width: 350px;
+        padding: 1em 2em 1em 1em;
+    }
+
+    #lowercontainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+        width: 320px;
+        margin: 0 0 0 0;
+    }
+
+    #reset {
+        align-self: flex-end;
+    }
+    
+    #tip-percentage label {
+        margin-right: 10em;
+    }
+    
+    .button {
+        background-color: hsl(183, 100%, 15%);
+        color: white;
+        border-radius: 5px;
+        border: none;
+        width: 4.5em;
+        height: 1.8em;
+        font-family: "space mono";
+        font-size: 1.5rem;
+        margin-bottom: .5em;
+    }
+
+    #customtip {
+        text-align: right;
+        width: 90px;
+        height: 37.2px;
+    }
+}

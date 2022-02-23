@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <img id="logo" src="images/logo.svg" alt="">
+  <div id="container">
+    <div id="halfcontainer">
+      <form>
+        <label for="bill">Bill</label>
+        <input type="text" id="bill" class="inputs" placeholder=0>
+      </form>
+      <div id="tip-percentage">
+        <label>Select Tip %</label>
+        <button class="button" onclick="tipButton(1.05)">5%</button>
+        <button class="button" onclick="tipButton(1.10)">10%</button>
+        <button class="button" onclick="tipButton(1.15)">15%</button>
+        <button class="button" onclick="tipButton(1.25)">25%</button>
+        <button class="button" onclick="tipButton(1.50)">50%</button>
+        <input type="text" id="customtip" class="inputs" placeholder="Custom">
+      </div>
+      <div id="peoplebox">
+        <label for="people">Number of People</label>
+        <p id="nozero"></p>
+        <input type="text" id="people" class="inputs" placeholder="0">
+      </div>
+    </div>
+    <div id="lowercontainer">
+      <ul id="ultip">
+        <li>Tip Amount</li>
+        <li style="color: hsl(184, 14%, 56%)">/ person</li>
+      </ul>
+      <p id="tip-amount">0.00</p>
+      <ul id="ultotal">
+        <li>Total</li>
+        <li style="color: hsl(184, 14%, 56%)">/ person</li>
+      </ul>
+      <p id="total">0.00</p>
+      <button id="reset" onclick="reset()">RESET</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
